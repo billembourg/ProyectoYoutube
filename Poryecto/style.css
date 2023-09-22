@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+/*barra de navegacion*/
+nav{
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    position: fixed;
+    width: 100%;
+    grid-gap: 20px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav div:nth-child(1){
+    /*background-color: red;*/
+    width: 15%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*justify-content: space-between;*/
+}
+.boton-menu{
+    border: none;
+    padding: 10px;
+    background:none;
+    cursor: pointer;
+    font-size: 34px;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+    top: -1px;
+    position: relative;
+
+}
+
+.nombre{
+    margin-left: 8px;
+    font-size: 22px;
+    font-family: 'Bebas Neue';
+    color: black;
+}
+
+.logo .bx{
+    background: red;
+    padding: 1px 5px;
+    font-size: 22px;
+    color: white;
+    border-radius:4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+     
+}
+
+.boton-menu:hover{
+    background-color: rgb(167, 165, 170);
+    border-radius: 100%;
+}
+
+nav div:nth-child(2){
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+nav div:nth-child(3){
+    /*background-color: rgb(0, 0, 0);*/
+    width: 10%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav div:nth-child(2) input{
+    /*background-color: blueviolet;*/
+    width:60%;
+    
+}
+
+/*Barra Busqueda*/
+#barra-busqueda{
+    padding: 0px 15px;
+    line-height: 35px;
+    border: 15px;
+    border: 1px solid rgb(231, 231, 231);
+    border-right: none;
+    font-size: 15px;
+    border-radius: 20px 0px 0px 20px;
+    
+}
+.barra-busqueda button{
+    border: 1px solid rgb(190, 187, 187);
+    color: rgb(0, 0, 0);
+    background-color: rgb(243, 243, 243);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px; 
+
+}
+.barra-busqueda button:hover{
+    background-color: #a5a3a3;
+
+}
+.boton-micro{
+    height: 37px;
+    width: 37px; 
+    margin-left: 20px; 
+    border-radius: 40px;
+     
+}
+.barra-busqueda .lupa{
+    height: 37px;
+    width: 60px; 
+    border-radius: 0px 20px 20px 0px;
+    width: 50;
+}
+
+/*Botones izq nav*/
+.botones-izq button{
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    padding: 7px 12px;
+    border-radius: 100px;
+    color: #000000;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+.botones-izq button:hover{
+    background-color: rgb(167, 165, 170);
+    border-radius: 100%;
+}
+
+.botones-izq a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    margin-right: 20px;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.botones-izq a img:hover{
+    box-shadow: 0px 0px 6px rgb(167, 165, 170);
+}
+/*Menu lateral*/
+aside{
+    padding-top: 5%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.5s ease;
+    overflow: hidden;
+    overflow-y: auto;
+
+}
+aside a{
+    display: block;
+    padding: 15px 35px;
+    background-color: none;
+    color: black;
+    font-size: 14px;
+    min-width: 800px;
+}
+aside a:hover{
+    background-color: rgb(167, 165, 170);
+}
+/*aside a.activo{
+    background-color: rgb(167, 165, 170);
+    font-weight: bold;
+}*/
+aside .bx{
+    color: #606060;
+    margin-right: 32px;
+    width: 20px;
+    align-items: center;
+    font-size: 20px;
+}
+/*aside  .activo .bx{
+    color: rgb(0, 0, 0);
+    
+}*/
+aside hr{
+    margin: 20px 0;
+    border: 1px solid #dfdfdf;
+}
+
+aside::-webkit-scrollbar{
+    width: 7px;
+    
+}
+aside::-webkit-scrollbar-thumb{
+    background-color: #606060;
+    border-radius: 10px;
+    height: 60px;
+
+}
+/*aside.close{
+    width: 100px;
+}*/
+
+/* Contenido Principal*/
+
+main {
+    height: 100vh;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-rows: repeat(3, 1fr);
+   /* grid-template-columns: repeat(4,1fr);*/
+    grid-column-gap: 18px;
+    grid-row-gap: 35px;
+    padding-left: 20%;
+    padding-top: 7%;
+    padding-right: 3%;
+    grid-gap: 20px;
+    overflow: hidden;
+    overflow-y: auto;
+    scroll-margin-right: 0;
+
+}
+
+main  a {
+    width: 100%;
+    
+}
+span{
+    margin-left: 50px;
+    margin-top: -30px;
+    font-size: 15px;
+}
+main  a.logo-usuario {
+width: 30px;
+
+}
+main  a.logo-usuario img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin-left: 0px;
+    margin-top: 10PX;
+    text-align: center;
+
+}
+main div a img{
+    width: 100%;
+    border-radius: 15px;
+}
+main div p{
+    color: #8b8b8b;
+    margin-left: 20px;
+    font-size: 13PX;
+}
+main::-webkit-scrollbar{
+    width: 7px;
+    
+}
+main::-webkit-scrollbar-thumb{
+    margin-left: 30px;
+    background-color: #606060;
+    border-radius: 10px;
+    height: 60px;}
+
+
+@media screen and (max-width:1200px){
+
+    main{
+        grid-template-columns: repeat(3,1fr);
+        padding-left: 25%;
+    }
+    nav div a .nombre {
+        font-size: 15px;
+    }
+    nav div .boton-menu{
+        margin-right: 15px;
+        font-size: 28px;
+    
+    }
+    nav div .logo .bx{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:992px){
+    main{
+        grid-template-columns: repeat(2,1fr);
+        padding-left: 30%;
+    }
+    nav div a span{
+        display: none;
+    }
+    aside div.div3 {
+        display: none;
+    
+    }
+    aside div.div4 {
+        display: none;
+    
+    }
+    
+    nav div.botones-izq button {
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px){
+    main{
+        grid-template-columns: repeat(2,1fr);
+        padding-left: 25%;
+        padding-right: 10%;
+        padding-top: 10%;
+    }
+    aside{
+        padding-top: 100px;
+        width: 80px;         
+    }
+    nav div.botones-der a {
+        padding-left: 10%;
+        padding-bottom: 10%;
+    }
+    
+}
+@media screen and (max-width:530px){
+    main{
+        grid-template-columns: repeat(1,1fr);
+        padding-left: 20%;
+        padding-top: 15%;
+    
+    }
+    nav div.botones-der a {
+        display: none;
+    }
+    
+}
